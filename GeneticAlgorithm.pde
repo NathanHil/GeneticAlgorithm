@@ -9,15 +9,17 @@ void setup() {
 		population[i] = new DNA();
 	}
 
-	// for (DNA dna : population) {
-	// 	print(dna.fitness());
-	// }
-	for (DNA d : population) {
-		for (char c : d.genes) {
-			print(c);
-		}
+	for (DNA dna : population) {
+		dna.fitness();
+		print(dna.fitness);
+		println("");
 	}
-	println("");
+	// for (DNA d : population) {
+	// 	for (char c : d.genes) {
+	// 		print(c);
+	// 	}
+	// }
+	//println("");
 }
 
 void draw() {

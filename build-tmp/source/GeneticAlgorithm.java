@@ -26,14 +26,16 @@ public void setup() {
 	}
 
 	for (DNA dna : population) {
-		print(dna.fitness());
+		dna.fitness();
+		print(dna.fitness);
+		println("");
 	}
-	/*for (DNA d : population) {
-		for (char c : d.genes) {
-			print(c);
-		}
-	}
-	print*/ln("");
+	// for (DNA d : population) {
+	// 	for (char c : d.genes) {
+	// 		print(c);
+	// 	}
+	// }
+	// println("");
 }
 
 public void draw() {
