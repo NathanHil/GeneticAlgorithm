@@ -1,8 +1,4 @@
-String[] testStrings = {
-	"to be or not to go", 
-	"to be or not to pi", 
-	"xxxxxxxxxxxxxxxxbe"
-};
+DNA[] population = new DNA[100];
 // Determine the fitness of each element of the population and breed the good ones
 // Also introduce mutation to introduce ordered randomness
 
