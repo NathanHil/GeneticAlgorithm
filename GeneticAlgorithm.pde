@@ -4,6 +4,15 @@ DNA[] population = new DNA[100];
 
 void setup() {
 	size(800, 800);
+	for (int i = 0; i < 100; i++) {
+		population[i] = new DNA();
+	}
+	for (DNA d : population) {
+		for (char c : d.genes) {
+			print(c);
+		}
+	}
+	println("");
 }
 
 void draw() {

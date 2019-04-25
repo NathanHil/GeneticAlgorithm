@@ -14,12 +14,35 @@ import java.io.IOException;
 
 public class GeneticAlgorithm extends PApplet {
 
+DNA[] population = new DNA[100];
+// Determine the fitness of each element of the population and breed the good ones
+// Also introduce mutation to introduce ordered randomness
+
 public void setup() {
 	
+	for (int i = 0; i < 100; i++) {
+		population[i] = new DNA();
+	}
+	for (DNA d : population) {
+		for (char c : d.genes) {
+			print(c);
+		}
+	}
+	println("");
 }
 
 public void draw() {
 	background(255);
+}
+class DNA {
+	// "is this the real life"
+	char[] genes = new char[21];
+
+	DNA() {
+		for (char i : genes) {
+			i = (char) random(32, 128);
+		}
+	}
 }
   public void settings() { 	size(800, 800); }
   static public void main(String[] passedArgs) {
