@@ -13,11 +13,15 @@ import java.io.OutputStream;
 import java.io.IOException; 
 
 public class GeneticAlgorithm extends PApplet {
-  public void setup() {
 
-    noLoop();
-  }
+public void setup() {
+	
+}
 
+public void draw() {
+	background(255);
+}
+  public void settings() { 	size(800, 800); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "GeneticAlgorithm" };
     if (passedArgs != null) {
