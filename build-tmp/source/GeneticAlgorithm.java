@@ -17,31 +17,47 @@ public class GeneticAlgorithm extends PApplet {
 DNA[] population = new DNA[100];
 // Determine the fitness of each element of the population and breed the good ones
 // Also introduce mutation to introduce ordered randomness
+// Fitness = total number of correct characters / total characters
 
 public void setup() {
 	
 	for (int i = 0; i < 100; i++) {
 		population[i] = new DNA();
 	}
-	for (DNA d : population) {
+
+	for (DNA dna : population) {
+		print(dna.fitness());
+	}
+	/*for (DNA d : population) {
 		for (char c : d.genes) {
 			print(c);
 		}
 	}
-	println("");
+	print*/ln("");
 }
 
 public void draw() {
 	background(255);
 }
 class DNA {
-	// "is this the real life"
+	String target = "is this the real life";
 	char[] genes = new char[21];
+	float fitness;
 
 	DNA() {
-		for (char i : genes) {
-			i = (char) random(32, 128);
+		for (int i = 0; i < genes.length; i++) {
+			genes[i] = (char) random(32, 128);
 		}
+	}
+
+	public void fitness() {
+		int score = 0;
+		for (int i = 0; i < genes.length; i++) {
+			if (genes[i] == target.charAt(i)) {
+				score++;
+			}
+		}
+		fitness = PApplet.parseFloat(score)/target.length();
 	}
 }
   public void settings() { 	size(800, 800); }
