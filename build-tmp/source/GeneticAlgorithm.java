@@ -25,17 +25,18 @@ public void setup() {
 		population[i] = new DNA();
 	}
 
+	// 9.4 create population of N elements each with randomly generated DNA
 	for (DNA dna : population) {
 		dna.fitness();
 		print(dna.fitness);
 		println("");
 	}
-	// for (DNA d : population) {
-	// 	for (char c : d.genes) {
-	// 		print(c);
-	// 	}
-	// }
-	//println("");
+	for (DNA d : population) {
+		for (char c : d.genes) {
+			print(c);
+		}
+		println("");
+	}
 }
 
 public void draw() {
