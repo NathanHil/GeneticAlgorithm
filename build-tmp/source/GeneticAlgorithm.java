@@ -69,6 +69,7 @@ public void draw() {
 	textFont(font,50);
 	text("Current Mutation: "+population[0].getPhrase(), 50, 100);
 	text("Gen #"+generation, width-500, 50);
+	//text("Best Fit: "+bestFit(), width-500, 150);
 }
 // Yong's DNA example to create a random set
 class DNA {
