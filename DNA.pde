@@ -1,7 +1,6 @@
 // Yong's DNA example to create a random set
 class DNA {
-	String target = "is this the real life";
-	char[] genes = new char[21];
+	char[] genes = new char[3];
 	float fitness;
 
 	DNA() {
@@ -16,26 +15,36 @@ class DNA {
 	}
 
 	// Calculate the fitness 
-	void fitness() {
+	void fitness(String targetPhrase) {
 		int score = 0;
 		for (int i = 0; i < genes.length; i++) {
-			if (genes[i] == target.charAt(i)) {
+			if (genes[i] == targetPhrase.charAt(i)) {
 				score++;
 			}
 		}
-		fitness = float(score)/target.length();
+		fitness = float(score)/targetPhrase.length();
 	}
 
-	// Funky town
+	// Funky town. Make babies
 	DNA cupidShuffle(DNA mate) {
 		DNA child = new DNA();
 
 		for (int i = 0; i < genes.length; i++) {
-			if (i%2 == 0) {
+			float coinFlip = random(genes.length);
+			if (coinFlip%2 == 0) {
 				child.genes[i] = genes[i];
 			}
 			else {
 				child.genes[i] = mate.genes[i];
+			}
+		}
+		return child;
+	}
+
+	void mutate(float mutationRate) {
+		for (int i = 0; i < genes.length; i++) {
+			if (random(1) < mutationRate) {
+			genes[i] = (char) random(32,128);
 			}
 		}
 	}
