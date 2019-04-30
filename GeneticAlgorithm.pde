@@ -9,6 +9,7 @@ void setup() {
 		population[i] = new DNA();
 	}
 
+	// 9.4 create population of N elements each with randomly generated DNA
 	for (DNA dna : population) {
 		dna.fitness();
 		print(dna.fitness);

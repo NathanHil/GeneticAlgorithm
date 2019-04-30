@@ -35,12 +35,13 @@ public void setup() {
 	// 		print(c);
 	// 	}
 	// }
-	// println("");
+	//println("");
 }
 
 public void draw() {
 	background(255);
 }
+// Yong's DNA example to create a random set
 class DNA {
 	String target = "is this the real life";
 	char[] genes = new char[21];

@@ -1,3 +1,4 @@
+// Yong's DNA example to create a random set
 class DNA {
 	String target = "is this the real life";
 	char[] genes = new char[21];
