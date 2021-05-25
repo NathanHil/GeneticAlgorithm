@@ -11,7 +11,7 @@ int generation = 0;
 
 void setup() {
 	size(1600, 800);
-	targetPhrase = "cat";
+	targetPhrase = "Hello world!";
 
 	population = new DNA[populationSize];
 	for ( int i = 0; i < population.length; i++) {

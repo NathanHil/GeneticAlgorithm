@@ -1,6 +1,6 @@
 // Yong's DNA example to create a random set
 class DNA {
-	char[] genes = new char[3];
+	char[] genes = new char[12];
 	float fitness;
 
 	DNA() {
